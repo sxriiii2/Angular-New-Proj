@@ -1,0 +1,22 @@
+<div class="bloginput">
+  <form (ngSubmit)="postBlog()">
+    <label
+      >Title:
+      <input
+        [(ngModel)]="blog.title"
+        [ngModelOptions]="{ standalone: true }"
+        required
+    /></label>
+    <br />
+    <label
+      >Content:
+      <textarea
+        [(ngModel)]="blog.content"
+        [ngModelOptions]="{ standalone: true }"
+        required
+      ></textarea>
+    </label>
+    <br />
+    <button type="submit">Post</button>
+  </form>
+</div>

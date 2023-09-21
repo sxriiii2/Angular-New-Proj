@@ -1,0 +1,17 @@
+<div *ngFor="let blog of blogs" class="table">
+  <h2 class="title">{{ blog.title }}</h2>
+  <p>{{ blog.content }}</p>
+  <div>
+    <button (click)="like(blog)">Like</button>
+    <span>Likes: {{ blog.likes }}</span>
+    <button (click)="dislike(blog)">Dislike</button>
+    <span>Dislikes: {{ blog.dislikes }}</span>
+  </div>
+  <div>
+    <input [(ngModel)]="comment" placeholder="Add a comment" />
+    <button (click)="postComment(blog)">Add Comment</button>
+  </div>
+  <ul>
+    <li *ngFor="let comment of blog.comments">{{ comment }}</li>
+  </ul>
+</div>
